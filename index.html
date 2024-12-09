@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>해피씨쀼~~</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,6 +21,7 @@
             background: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            position: relative;
         }
         h1 {
             color: #333;
@@ -35,14 +36,36 @@
         a:hover {
             text-decoration: underline;
         }
+        .random-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            display: none;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = [
+                "image/1.PNG",
+                "image/2.PNG",
+                "image/3.PNG"
+            ];
+
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            const imgElement = document.querySelector(".random-image");
+
+            imgElement.src = randomImage;
+            imgElement.style.display = "block";
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My GitHub Page!</h1>
-        <p>This is a simple web page hosted on <strong>GitHub Pages</strong>.</p>
-        <p>Feel free to customize it and make it your own.</p>
-        <a href="https://github.com" target="_blank">Learn more about GitHub Pages</a>
+        <h1>해피씨 랜덤 이미지 생성기</h1>
+        <p>작은 글씨~ <strong>볼드체~</strong>.</p>
+        <img class="random-image" alt="Random Image" />
+        <p>아래 작은글씨</p>
+        <a href="https://www.instagram.com/happyc_bbyu/" target="_blank">해피씨쀼 인스타 구경가기</a>
     </div>
 </body>
 </html>
